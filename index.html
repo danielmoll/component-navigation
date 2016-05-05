@@ -201,7 +201,12 @@ pre[class*&#x3D;&quot;language-&quot;] {
     <div id="component-preview">
       <script>
       window.addEventListener('load', function () {
-        require('react-dom').render(require('example'),document.getElementById('component-preview'));
+        function _interopRequireDefault(obj) {
+            return obj && obj.__esModule ? obj : {
+                'default': obj
+            };
+        }
+        require('react-dom').render(_interopRequireDefault(require('example')).default,document.getElementById('component-preview'));
       });
       </script>
     </div>
@@ -414,7 +419,7 @@ pre[class*&#x3D;&quot;language-&quot;] {
         title<span class="token punctuation" >:</span> sharedMenu<span class="token punctuation" >.</span>subscribe<span class="token punctuation" >.</span>title<span class="token punctuation" >,</span>
         href<span class="token punctuation" >:</span> sharedMenu<span class="token punctuation" >.</span>subscribe<span class="token punctuation" >.</span>href<span class="token punctuation" >,</span>
         target<span class="token punctuation" >:</span> <span class="token string" >'_blank'</span><span class="token punctuation" >,</span>
-        hideWhenSubscribed<span class="token punctuation" >:</span> <span class="token boolean" >true</span><span class="token punctuation" >,</span>
+        isSubscriberLink<span class="token punctuation" >:</span> <span class="token boolean" >true</span><span class="token punctuation" >,</span>
         unstyled<span class="token punctuation" >:</span> <span class="token boolean" >false</span><span class="token punctuation" >,</span>
         i13nModel<span class="token punctuation" >:</span> <span class="token punctuation" >{</span> <span class="token comment" spellcheck="true">// eslint-disable-line id-match</span>
           action<span class="token punctuation" >:</span> <span class="token string" >'click'</span><span class="token punctuation" >,</span>
@@ -422,8 +427,29 @@ pre[class*&#x3D;&quot;language-&quot;] {
         <span class="token punctuation" >}</span><span class="token punctuation" >,</span>
       <span class="token punctuation" >}</span><span class="token punctuation" >,</span>
     <span class="token punctuation" >]</span><span class="token punctuation" >;</span>
+    <span class="token keyword" >const</span> subBranding <span class="token operator" >=</span> <span class="token punctuation" >(</span>
+      <span class="token operator" >&lt;</span>img
+        src<span class="token operator" >=</span><span class="token string" >"/assets/logo-world-if.svg"</span>
+        className<span class="token operator" >=</span><span class="token string" >"sub-branding__logo"</span>
+        height<span class="token operator" >=</span><span class="token string" >"64"</span>
+        width<span class="token operator" >=</span><span class="token string" >"192"</span>
+      <span class="token operator" >/</span><span class="token operator" >></span>
+    <span class="token punctuation" >)</span><span class="token punctuation" >;</span>
     <span class="token keyword" >export</span> <span class="token keyword" >default</span> <span class="token punctuation" >(</span>
       <span class="token operator" >&lt;</span>div<span class="token operator" >></span>
+        <span class="token operator" >&lt;</span>div<span class="token operator" >></span>
+            <span class="token operator" >&lt;</span>Navigation className<span class="token operator" >=</span><span class="token string" >"navigation navigation--registered navigation--sub-branding navigation--sticked"</span>
+              svgUri<span class="token operator" >=</span><span class="token string" >"assets/icons.svg"</span>
+              sectionsCardData<span class="token operator" >=</span><span class="token punctuation" >{</span>navigationLinks<span class="token punctuation" >}</span>
+              moreBalloonData<span class="token operator" >=</span><span class="token punctuation" >{</span>moreBalloonData<span class="token punctuation" >}</span>
+              accordionData<span class="token operator" >=</span><span class="token punctuation" >{</span>accordionContext<span class="token punctuation" >}</span>
+              sharedMenu<span class="token operator" >=</span><span class="token punctuation" >{</span>sharedMenu<span class="token punctuation" >}</span>
+              subBranding<span class="token operator" >=</span><span class="token punctuation" >{</span>subBranding<span class="token punctuation" >}</span>
+            <span class="token operator" >/</span><span class="token operator" >></span>
+            <span class="token operator" >&lt;</span>p style<span class="token operator" >=</span><span class="token punctuation" >{</span><span class="token punctuation" >{</span> paddingBottom<span class="token punctuation" >:</span> <span class="token string" >'400px'</span> <span class="token punctuation" >}</span><span class="token punctuation" >}</span><span class="token operator" >></span>
+              Scroll down to experience the thrill <span class="token keyword" >of</span> sticky header technology
+            <span class="token operator" >&lt;</span><span class="token operator" >/</span>p<span class="token operator" >></span>
+        <span class="token operator" >&lt;</span><span class="token operator" >/</span>div<span class="token operator" >></span>
         <span class="token operator" >&lt;</span>div<span class="token operator" >></span>
             <span class="token operator" >&lt;</span>Navigation className<span class="token operator" >=</span><span class="token string" >"navigation navigation--registered navigation--sticked"</span>
               svgUri<span class="token operator" >=</span><span class="token string" >"assets/icons.svg"</span>
@@ -444,6 +470,7 @@ pre[class*&#x3D;&quot;language-&quot;] {
             accordionData<span class="token operator" >=</span><span class="token punctuation" >{</span>accordionContext<span class="token punctuation" >}</span>
             moreBalloonData<span class="token operator" >=</span><span class="token punctuation" >{</span>moreBalloonData<span class="token punctuation" >}</span>
             sharedMenu<span class="token operator" >=</span><span class="token punctuation" >{</span>sharedMenu<span class="token punctuation" >}</span>
+            googleSearchDivIDPrefix<span class="token operator" >=</span><span class="token punctuation" >{</span><span class="token string" >'b-'</span><span class="token punctuation" >}</span>
           <span class="token operator" >/</span><span class="token operator" >></span>
           <span class="token operator" >&lt;</span>p style<span class="token operator" >=</span><span class="token punctuation" >{</span><span class="token punctuation" >{</span> paddingBottom<span class="token punctuation" >:</span> <span class="token string" >'400px'</span> <span class="token punctuation" >}</span><span class="token punctuation" >}</span><span class="token operator" >></span>
             Scroll down to experience the thrill <span class="token keyword" >of</span> sticky header technology
@@ -458,6 +485,7 @@ pre[class*&#x3D;&quot;language-&quot;] {
             accordionData<span class="token operator" >=</span><span class="token punctuation" >{</span>accordionContext<span class="token punctuation" >}</span>
             moreBalloonData<span class="token operator" >=</span><span class="token punctuation" >{</span>moreBalloonData<span class="token punctuation" >}</span>
             sharedMenu<span class="token operator" >=</span><span class="token punctuation" >{</span>sharedMenu<span class="token punctuation" >}</span>
+            googleSearchDivIDPrefix<span class="token operator" >=</span><span class="token punctuation" >{</span><span class="token string" >'c-'</span><span class="token punctuation" >}</span>
           <span class="token operator" >/</span><span class="token operator" >></span>
           <span class="token operator" >&lt;</span>p style<span class="token operator" >=</span><span class="token punctuation" >{</span><span class="token punctuation" >{</span> paddingBottom<span class="token punctuation" >:</span> <span class="token string" >'400px'</span> <span class="token punctuation" >}</span><span class="token punctuation" >}</span><span class="token operator" >></span>
             Scroll down to experience the thrill <span class="token keyword" >of</span> sticky header technology
